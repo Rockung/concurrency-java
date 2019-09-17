@@ -1,19 +1,19 @@
 package org.example.concurrency.example01;
 
 public class ThreadService {
-    private Thread executeThread = null;
+    private Thread parentThread = null;
     private boolean finished = false;
 
     public void execute(final Runnable task) {
-        executeThread = new Thread() {
+        parentThread = new Thread() {
             @Override
             public void run() {
-                Thread runner = new Thread(task);
-                runner.setDaemon(true);
+                Thread child = new Thread(task);
+                child.setDaemon(true);
 
-                runner.start();
+                child.start();
                 try {
-                    runner.join();
+                    child.join();
                     finished = true;
                     System.out.println("The task is finished");
                 } catch(InterruptedException e) {
@@ -22,12 +22,12 @@ public class ThreadService {
             }
         };
 
-        executeThread.start();
+        parentThread.start();
     }
 
     public void shutdown(long mills) {
-        if (executeThread == null) {
-            System.out.println("executeThread isn't created");
+        if (parentThread == null) {
+            System.out.println("The parent thread isn't created");
             return;
         }
 
@@ -36,19 +36,19 @@ public class ThreadService {
         while (!finished) {
             if ((System.currentTimeMillis() - currentTime) >= mills) {
                 System.out.println("The task is overtime, killing");
-                executeThread.interrupt();
+                parentThread.interrupt();
                 break;
             }
 
             try {
-                executeThread.sleep(1);
+                parentThread.sleep(1);
             } catch (InterruptedException e) {
-                System.out.println("The executeThread is interrupted");
+                System.out.println("The parent thread is interrupted");
                 break;
             }
         }
 
-        executeThread = null;
+        parentThread = null;
         finished = false;
     }
 }

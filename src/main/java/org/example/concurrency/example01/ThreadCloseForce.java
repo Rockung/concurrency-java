@@ -10,7 +10,10 @@ public class ThreadCloseForce {
 
         ThreadService service = new ThreadService();
         service.execute(() -> {
+            // case 1: dead loop
             // while (true) {}
+
+            //case 2: short running
             for (int i = 0; i < 5; i++) {
                 try {
                     Thread.sleep(1000);
