@@ -1,4 +1,4 @@
-package org.example.concurrency.example04;
+package org.example.thread.example04;
 
 import java.util.Arrays;
 import java.util.Optional;

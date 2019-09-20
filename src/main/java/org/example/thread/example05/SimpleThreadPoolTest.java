@@ -1,4 +1,4 @@
-package org.example.concurrency.example05;
+package org.example.thread.example05;
 
 public class SimpleThreadPoolTest {
     public static void main(String[] args) throws InterruptedException {

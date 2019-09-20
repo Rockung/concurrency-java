@@ -1,4 +1,4 @@
-package org.example.concurrency.example01;
+package org.example.thread.example01;
 
 /**
  * Force a long-running thread to exit

@@ -1,4 +1,4 @@
-package org.example.concurrency.example04;
+package org.example.thread.example04;
 
 public class ThreadExceptionCatcher {
     private final static int A = 10;

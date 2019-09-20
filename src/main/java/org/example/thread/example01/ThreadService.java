@@ -1,4 +1,4 @@
-package org.example.concurrency.example01;
+package org.example.thread.example01;
 
 public class ThreadService {
     private Thread parentThread = null;

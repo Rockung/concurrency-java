@@ -1,4 +1,4 @@
-package org.example.concurrency.example05;
+package org.example.thread.example05;
 
 import java.util.ArrayList;
 import java.util.Iterator;

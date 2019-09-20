@@ -1,4 +1,4 @@
-package org.example.concurrency.example02;
+package org.example.thread.example02;
 
 import java.util.*;
 

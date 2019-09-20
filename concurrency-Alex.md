@@ -49,9 +49,7 @@ monitor thread life cycle
 ### Guarded Suspension
 ### Balking
 ### Producer-consumer
-
 ### Read-write lock
-
 * w - w/r conflict
 * r - w/r no conflict
 ### Thread per message
