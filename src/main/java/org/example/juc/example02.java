@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * atomic operations in JUC
+ */
 public class example02 {
     private final static int NUM_THREADS = 100;
     private final static int NUM_LOOP = 1000;

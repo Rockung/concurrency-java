@@ -1,5 +1,8 @@
 package org.example.thread.example01;
 
+/**
+ * A thread to run a long-time service
+ */
 public class ThreadService {
     private Thread parentThread = null;
     private boolean finished = false;

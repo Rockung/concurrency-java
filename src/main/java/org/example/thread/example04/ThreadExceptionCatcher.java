@@ -15,6 +15,7 @@ public class ThreadExceptionCatcher {
             }
         });
 
+        // set a hook to catch exceptions from a thread
         t.setUncaughtExceptionHandler((thread, e) -> {
             System.out.println(e);
             System.out.println(thread);

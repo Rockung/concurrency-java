@@ -2,6 +2,11 @@ package org.example.juc;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * CAS: Compare And Set/Swap
+ *   with the old value as a parameter, test equality and set or swap,
+ *   just like update operation with a version in database
+ */
 public class example06 {
 
     public static void main(String[] args) {

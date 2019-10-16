@@ -1,5 +1,8 @@
 package org.example.thread.example04;
 
+/**
+ * The interrupted exception just happens when a thread call its methods.
+ */
 public class ThreadInterruptedTest {
     public static void main(String[] args) {
         Thread t = new Thread(() -> {
